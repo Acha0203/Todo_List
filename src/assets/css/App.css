@@ -14,7 +14,7 @@ body {
 
 /* App.js */
 
-.sunset {
+.todo-bg {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -26,17 +26,22 @@ body {
 }
 
 .container {
-  width: 90vw;
+  width: 90%;
   text-align: left;
 }
 
 /* Form.js */
 
+input[type="text"] {
+  width: 70%;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
 .input-task {
   color: rgba(255, 255, 255, 1);
-  background: transparent;
   border: solid 0px;
-  margin: 0.6rem;
+  margin: 1rem;
 }
 
 .input-task-con {
@@ -49,7 +54,7 @@ body {
   border-radius: 5px;
 }
 
-/* TodoList.js */
+/* TodoItem.js */
 
 .display-todo {
   display: flex;
@@ -64,17 +69,13 @@ body {
 
 .btn-gray {
   color: dimgray;
+  font-size: 1.6rem;
 }
 
 .todo-text {
   width: 84%;
+  font-size: 1.6rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-/* NoTask.js */
-
-.no-task-text {
-  color: rgba(255, 255, 255, 1);
 }

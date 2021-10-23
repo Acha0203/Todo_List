@@ -47,14 +47,4 @@ export class TodoList {
 
     return taskArray;
   }
-
-  static toggleFlag(id) {
-    let iterator = TodoList.head;
-
-    while (iterator.id !== id) {
-      iterator = iterator.next;
-    }
-
-    iterator.doneFlag = iterator.doneFlag ? false : true;
-  }
 }

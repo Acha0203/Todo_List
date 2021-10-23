@@ -1,21 +1,30 @@
-// import { TodoList } from '../model/index';
+import { TodoList } from "../model/index";
 import TodoItem from "./TodoItem";
 
 const Todo = ({ taskArray, setTaskArray }) => {
-  const handleClick = clicked => {
-    const newTodo = taskArray.map(todo => {
-      if (todo.id === clicked.id) {
-        todo.doneFlag = !todo.doneFlag;
+  const handleCheck = clicked => {
+    const newTask = taskArray.map(task => {
+      if (task.id === clicked.id) {
+        task.doneFlag = !task.doneFlag;
       }
-      return todo;
+      return task;
     });
-    setTaskArray(newTodo);
+    setTaskArray(newTask);
+  };
+  const handleDelete = clicked => {
+    taskArray.map(task => {
+      if (task.id === clicked.id) {
+        TodoList.deleteTask(task.id);
+      }
+      return task;
+    });
+    setTaskArray(TodoList.createTaskArray);
   };
 
   return (
     <>
-      {taskArray.map(todo =>
-        <TodoItem key={todo.id} onCheck={handleClick} todo={todo} />
+      {taskArray.map(task =>
+        <TodoItem key={task.id} onCheck={handleCheck} task={task} onDelete={handleDelete} />
       )}
     </>
   );

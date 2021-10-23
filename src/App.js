@@ -7,23 +7,23 @@ import './assets/css/App.css';
 import './assets/css/destyle.css'
 
 function App() {
-  const [task, setTask] = useState("");
+  const [taskString, setTaskString] = useState("");
   const [taskArray, setTaskArray] = useState(TodoList.createTaskArray);
   const createNewTask = (e) => {
     e.preventDefault();
-    TodoList.createTask(task);
+    TodoList.createTask(taskString);
     getTaskArray();
-    setTask("");
+    setTaskString("");
   };
   const getTaskArray = () => {
     setTaskArray(TodoList.createTaskArray);
   };
 
   return (
-    <div className="sunset">
+    <div className="todo-bg">
       <div className="container">
         <Title />
-        <Form setTask={setTask} createNewTask={createNewTask} task={task} />
+        <Form setTaskString={setTaskString} createNewTask={createNewTask} taskString={taskString} />
         <Todo taskArray={taskArray} setTaskArray={setTaskArray} />
       </div>
     </div>
