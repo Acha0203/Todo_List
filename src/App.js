@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { TodoList } from './model/index';
+import Title from './components/Title';
+import Form from './components/Form';
+import Todo from './components/Todo';
+import './assets/css/App.css';
+import './assets/css/destyle.css'
 
 function App() {
+  const [task, setTask] = useState("");
+  const [taskArray, setTaskArray] = useState(TodoList.createTaskArray);
+  const createNewTask = (e) => {
+    e.preventDefault();
+    TodoList.createTask(task);
+    getTaskArray();
+    setTask("");
+  };
+  const getTaskArray = () => {
+    setTaskArray(TodoList.createTaskArray);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="sunset">
+      <div className="container">
+        <Title />
+        <Form setTask={setTask} createNewTask={createNewTask} task={task} />
+        <Todo taskArray={taskArray} setTaskArray={setTaskArray} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
