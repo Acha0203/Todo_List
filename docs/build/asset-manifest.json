@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Todo_List/static/css/main.ac2ffd6d.chunk.css",
+    "main.js": "/Todo_List/static/js/main.8d91194f.chunk.js",
+    "main.js.map": "/Todo_List/static/js/main.8d91194f.chunk.js.map",
+    "runtime-main.js": "/Todo_List/static/js/runtime-main.c89fa034.js",
+    "runtime-main.js.map": "/Todo_List/static/js/runtime-main.c89fa034.js.map",
+    "static/js/2.6247a721.chunk.js": "/Todo_List/static/js/2.6247a721.chunk.js",
+    "static/js/2.6247a721.chunk.js.map": "/Todo_List/static/js/2.6247a721.chunk.js.map",
+    "index.html": "/Todo_List/index.html",
+    "static/css/main.ac2ffd6d.chunk.css.map": "/Todo_List/static/css/main.ac2ffd6d.chunk.css.map",
+    "static/js/2.6247a721.chunk.js.LICENSE.txt": "/Todo_List/static/js/2.6247a721.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Todo_List/static/media/milky-way-g113ab2ea1_1920.95d6c298.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c89fa034.js",
+    "static/js/2.6247a721.chunk.js",
+    "static/css/main.ac2ffd6d.chunk.css",
+    "static/js/main.8d91194f.chunk.js"
+  ]
+}
