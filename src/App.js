@@ -11,9 +11,13 @@ function App() {
   const [taskArray, setTaskArray] = useState(TodoList.createTaskArray);
   const createNewTask = (e) => {
     e.preventDefault();
-    TodoList.createTask(taskString);
-    getTaskArray();
-    setTaskString("");
+    if (taskString === "") {
+      alert("Write a new task!");
+    } else {
+      TodoList.createTask(taskString);
+      getTaskArray();
+      setTaskString("");
+    }
   };
   const getTaskArray = () => {
     setTaskArray(TodoList.createTaskArray);
